@@ -1,0 +1,145 @@
+.menu {
+    padding: var(--spacing-xl) 5%;
+    background: var(--background);
+}
+
+.menu-category {
+    margin-bottom: 5rem;
+}
+
+.category-toggle {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.category-toggle:focus-visible {
+    outline: 3px solid rgba(56, 83, 164, 0.4);
+    outline-offset: 6px;
+    border-radius: 12px;
+}
+
+.category-title {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 1.9rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.category-chevron {
+    font-size: 1.8rem;
+    color: #846b59;
+    transition: transform 0.25s ease;
+}
+
+.category-chevron.open {
+    transform: rotate(180deg);
+}
+
+.category-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.35s ease;
+}
+
+.category-content.open {
+    max-height: 10000px;
+    opacity: 1;
+}
+
+.category-note {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #846b59;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.special-offer {
+    background: linear-gradient(135deg, #3853a4, #846b59);
+    color: white;
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 4rem;
+    box-shadow: 0 20px 60px rgba(56, 83, 164, 0.3);
+}
+
+.special-offer h2 {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.offer-discount {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.offer-description {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+.offer-tag {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 2.5rem 6%;
+    }
+
+    .menu-category {
+        margin-bottom: 3rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .category-chevron {
+        font-size: 1.4rem;
+    }
+
+    .category-note {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 2rem 5%;
+    }
+
+    .category-title {
+        font-size: 1.35rem;
+    }
+}

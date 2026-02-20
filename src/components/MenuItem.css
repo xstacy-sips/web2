@@ -1,0 +1,227 @@
+.menu-item {
+    background: white;
+    border-radius: 24px;
+    padding: 0.08rem 0.09rem;
+    box-shadow: none;
+    transition: all 0.3s;
+    border: 1px solid rgba(56, 83, 164, 0.08);
+    box-sizing: border-box;
+    overflow: visible;
+    position: relative;
+    font-size: 1rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.menu-item-media {
+    position: relative;
+    flex: 0 0 36%;
+    min-width: 130px;
+}
+
+.menu-item-photo {
+    aspect-ratio: auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgba(56, 83, 164, 0.06);
+    padding: 0.4rem;
+}
+
+.menu-item-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.menu-item-header {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    z-index: 2;
+}
+
+.menu-item-body {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+.menu-item-header {
+    position: static;
+    margin-bottom: 0.2rem;
+}
+
+.menu-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    --badge-fill: #ff6b6b;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 1rem;
+    border-radius: 1.9rem 0.9rem 0.9rem 0.15rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: none;
+    color: #fff;
+    background: #fff;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.badge::after {
+    content: '';
+    position: absolute;
+    inset: 0.2rem;
+    border-radius: 999px;
+    background: var(--badge-fill);
+    z-index: -1;
+}
+
+.badge-text {
+    position: relative;
+    z-index: 1;
+}
+
+.badge.bestseller {
+    --badge-fill: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+}
+
+.badge.must-try {
+    --badge-fill: #f76674;
+}
+
+.badge.new {
+    --badge-fill: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.badge.healthy {
+    --badge-fill: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+
+.badge.out-of-stock {
+    --badge-fill: linear-gradient(135deg, #b54545, #8f2f2f);
+}
+
+.menu-item-content h3 {
+    font-family: 'Playpen Sans';
+    font-size: 1.6rem;
+    color: var(--primary);
+    /* margin-bottom: 0.8rem; */
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    text-transform: none;
+}
+
+.menu-item-description {
+    font-family: 'Nunito';
+    
+    font-size: 1.05rem;
+    color: var(--accent-brown);
+    line-height: 1.6;
+    margin-bottom: 0.2rem;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+    text-transform: none;
+}
+
+.menu-item-prices {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--accent-brown);
+    flex-wrap: wrap;
+}
+
+.price-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    color: var(--accent-brown);
+}
+
+.price-block.price-regular {
+    color: var(--primary);
+}
+
+.price-amount {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: inherit;
+}
+
+.price-label {
+    font-family: 'Nunito';
+    font-size: 0.8rem;
+    letter-spacing: 0.6px;
+    color: inherit;
+}
+
+.price-large {
+    font-size: 1.35rem;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        padding: 1.3rem 1.4rem;
+        gap: 1rem;
+    }
+
+    .menu-item-photo {
+        flex: 0 0 36%;
+        min-width: 120px;
+    }
+
+    .menu-item-content h3 {
+        font-size: 1.45rem;
+    }
+
+    .menu-item-description {
+        font-size: 1rem;
+    }
+
+    .menu-item-prices {
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        padding: 0.1rem 0.2rem;
+        border-radius: 22px;
+    }
+
+    .menu-item-photo {
+        border-radius: 16px;
+        min-width: 110px;
+    }
+
+    .price-amount {
+        font-size: 1rem;
+    }
+
+    .price-large {
+        font-size: 1.2rem;
+    }
+}
