@@ -2,6 +2,7 @@
   "name": "xstacy-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://xstacy-sips.github.io/web2",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
