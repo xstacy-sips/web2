@@ -3,8 +3,8 @@ import './MenuItem.css';
 
 const MenuItem = ({ name, description, price, priceSmall, badges = [], outOfStock = false }) => {
   const imageSrc = name
-    // ? `/assets/images/Doddel Drinks/${encodeURIComponent(name)}.jpg`
-       ? `${process.env.PUBLIC_URL}/assets/images/Doddel Drinks/${encodeURIComponent(name)}.jpg`
+    ? `/assets/images/Doddel Drinks/${encodeURIComponent(name)}.jpg`
+       // ? `${process.env.PUBLIC_URL}/assets/images/Doddel Drinks/${encodeURIComponent(name)}.jpg`
 
     : null;
   const normalizedDescription =
